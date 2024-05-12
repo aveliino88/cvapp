@@ -8,6 +8,7 @@ import {
   ClerkProvider,
 } from "@clerk/nextjs";
 import {dark} from "@clerk/themes";
+import Footer from "@/components/ui/Footer";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -42,8 +43,9 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-        <Navbar />    
+        <Navbar />
         {children}
+        <Footer />
         </ThemeProvider>
         </ClerkProvider>
         </body>

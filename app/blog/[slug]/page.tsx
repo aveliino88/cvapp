@@ -25,8 +25,8 @@ export default async function DynamicPage({ params }) {
 			<div className="flex justify-center">
 			<img src={`${directus.url}assets/${post.image.filename_disk}?width=600`} alt="" />
 			</div>
-			<h1 className='text-xl flex justify-center'>{post.title}</h1>
-			<div className='mt-10' dangerouslySetInnerHTML={{ __html: post.content }}></div>
+			<h1 className='text-xl flex justify-center mt-5'>{post.title}</h1>
+			<div className='leading-7 [&:not(:first-child)]:mt-6' dangerouslySetInnerHTML={{ __html: post.content }}></div>
 		</div>	
 		</>
 	);
