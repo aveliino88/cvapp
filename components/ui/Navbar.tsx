@@ -12,18 +12,18 @@ import {
 function Navbar() {
   return (
     <nav>
-    <ul className='flex flex-row space-x-3 mt-5 justify-center'>
-      <li className='font-bold'>
+    <ul className='flex flex-row space-x-3 mt-5 justify-center flex-wrap'>
+      <li className='font-bold mb-2'>
         <Link href="/">
         <Button variant="outline">Home</Button>
         </Link>
       </li>
-      <li className='font-bold'>
+      <li className='font-bold mb-2'>
         <Link href="/about">
         <Button variant="outline">About</Button>
           </Link>
       </li>
-      <li className='font-bold'>
+      <li className='font-bold mb-2'>
         <Link href="/blog">
         <Button variant="outline">Blog</Button>
           </Link>
@@ -31,7 +31,7 @@ function Navbar() {
       <li>
         <ModeToggle />
       </li>
-      <li className="flex space-x-3 justify-content-end">  {/* Added class */}
+      <li className="flex space-x-3 justify-content-end mb-2">  {/* Added class */}
       <SignedIn>
       <UserButton />
       </SignedIn>
