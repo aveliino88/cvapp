@@ -7,9 +7,6 @@ export default function Home() {
     <code className="rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold mt-5">
      npx create-next-app@latest
     </code>
-    <code className="rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold mt-5">
-      @radix-ui/react-alert-dialog
-    </code>
   </div>
   );
 }
