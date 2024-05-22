@@ -5,7 +5,7 @@ export default function Home() {
         This page is built using NextJS
     </h2>
     <code className="rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold mt-5">
-     npx create-next-app@latest
+     npx create-next-app@latest my-next-app
     </code>
   </div>
   );
