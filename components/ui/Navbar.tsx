@@ -26,7 +26,7 @@ function Navbar() {
       <li className='font-bold mb-2'>
         <Link href="/blog">
         <Button variant="outline">Blog</Button>
-          </Link>
+        </Link>
       </li>
       <li>
         <ModeToggle />
