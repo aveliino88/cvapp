@@ -29,12 +29,12 @@ const PasswordGenerator = () => {
 
   return (
     <div className='mt-5 flex flex-col items-center'>
-      <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">Generate Strong Password</h4>
+      <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 flex justify-center mb-5">Password Generator</h2>
       <Button variant="secondary" onClick={() => generatePassword()}>Generate Password</Button>
       {password && (
         <div>
           <small className="text-sm font-medium leading-none mt-5">This is your password</small>
-          <p className='mt-5 flex justify-center border-2 border-green-600 rounded'>{password}</p>
+          <p className='mt-5 flex justify-center border-2 border-green-600 rounded select-all text-lg'>{password}</p>
           <div className='mt-5 flex justify-center'>
             <Button
               variant={copied ? 'default' : 'outline'} // Change button style based on copied state

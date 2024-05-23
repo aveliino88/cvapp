@@ -28,6 +28,11 @@ function Navbar() {
         <Button variant="outline">Blog</Button>
         </Link>
       </li>
+      <li className='font-bold mb-2'>
+        <Link href="/generator">
+        <Button variant="outline">Tools</Button>
+        </Link>
+      </li>
       <li>
         <ModeToggle />
       </li>
