@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link'
 import Hero from "@/components/Hero";
 import Image from 'next/image';
-import { Separator } from "@/components/ui/Separator";
+import { Separator } from "@/components/ui/separator";
 import {Text} from "@/components/Text";
 
 export default function Home() {
