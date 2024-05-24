@@ -14,40 +14,40 @@ const Hero = () => {
       </div>
       <div className="w-full lg:w-1/2 flex flex-col space-y-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="p-4 border-dotted border-2 border-indigo-600 rounded-lg hover:scale-105">
-            <h3 className="text-xl font-bold mb-2">NextJS</h3>
+          <div className="p-4 border-solid border-2 border-indigo-600 rounded-lg hover:scale-105">
+            <h3 className="text-xl font-bold mb-2">NextJS 😋</h3>
             <p className="text-sm font-medium leading-none">
-              Description of your first feature here.
+            The React Framework for the Web
             </p>
           </div>
-          <div className="p-4 border-dotted border-2 border-green-500 rounded-lg hover:scale-105">
-            <h3 className="text-xl font-bold mb-2">TailwindCSS</h3>
+          <div className="p-4 border-solid border-2 border-green-500 rounded-lg hover:scale-105">
+            <h3 className="text-xl font-bold mb-2">TailwindCSS 👌</h3>
             <p className="text-sm font-medium leading-none">
-              Description of your second feature here.
+            Tailwind CSS is an open-source CSS framework
             </p>
           </div>
-          <div className="p-4 border-dotted border-2 border-green-500 rounded-lg hover:scale-105">
-            <h3 className="text-xl font-bold mb-2">Clerk Auth</h3>
+          <div className="p-4 border-solid border-2 border-green-500 rounded-lg hover:scale-105">
+            <h3 className="text-xl font-bold mb-2">Clerk Auth 🔐</h3>
             <p className="text-sm font-medium leading-none">
-              Description of your third feature here.
+            The most comprehensive User management platform
             </p>
           </div>
-          <div className="p-4 border-dotted border-2 border-indigo-600 rounded-lg hover:scale-105">
-            <h3 className="text-xl font-bold mb-2">ShadCN</h3>
+          <div className="p-4 border-solid border-2 border-indigo-600 rounded-lg hover:scale-105">
+            <h3 className="text-xl font-bold mb-2">ShadCN 👍</h3>
             <p className="text-sm font-medium leading-none">
-              Description of your fourth feature here.
+            Beautifully designed components for any project
             </p>
           </div>
-          <div className="p-4 border-dotted border-2 border-indigo-600 rounded-lg hover:scale-105">
-            <h3 className="text-xl font-bold mb-2">Directus</h3>
+          <div className="p-4 border-solid border-2 border-indigo-600 rounded-lg hover:scale-105">
+            <h3 className="text-xl font-bold mb-2">Directus 😎</h3>
             <p className="text-sm font-medium leading-none">
-              Description of your fourth feature here.
+            The backend to build anything or everything
             </p>
           </div>
-          <div className="p-4 border-dotted border-2 border-green-500 rounded-lg hover:scale-105">
-            <h3 className="text-xl font-bold mb-2">Aceternity UI</h3>
+          <div className="p-4 border-solid border-2 border-green-500 rounded-lg hover:scale-105">
+            <h3 className="text-xl font-bold mb-2">Aceternity UI 🥇</h3>
             <p className="text-sm font-medium leading-none">
-              Description of your fourth feature here.
+            Beautiful Tailwind CSS and Framer Motion Components
             </p>
           </div>
         </div>
