@@ -1,9 +1,7 @@
-import { Button } from "@/components/ui/button";
-import Link from 'next/link'
 import Hero from "@/components/Hero";
-import Image from 'next/image';
 import { Separator } from "@/components/ui/separator";
-import {Text} from "@/components/Text";
+import Cv from "@/components/Cv";
+import CodePage from "@/components/CodePage";
 
 export default function Home() {
 
@@ -14,6 +12,7 @@ export default function Home() {
     </h2>
       <Hero />
       <Separator orientation="horizontal" className="mb-10" />
+      <CodePage />
   </div>
     
   );
