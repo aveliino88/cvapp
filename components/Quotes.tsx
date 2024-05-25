@@ -1,10 +1,10 @@
 // @ts-nocheck
 "use client";
 import { useState } from 'react';
-import { Button } from '@/components/ui/button';
+import { Button } from 'shadcn-ui';
 
 export default function Quotes() {
-  const [quote, setQuote] = useState(null);
+  const [quote, setQuote] = useState<{ quote: string; author: string } | null>(null);
 
   const fetchRandomQuote = async () => {
     try {
@@ -18,15 +18,14 @@ export default function Quotes() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-5">
-      <h1 className="text-xl font-semibold mb-5">Click the button to get a random quote for a daily inspiration 🤩</h1>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-5">
       <Button variant="secondary" onClick={fetchRandomQuote} className="mb-5">
-        Get Quote
+        Get Random Quote
       </Button>
       {quote && (
-        <div className="p-6 rounded-lg shadow-md max-w-lg text-center">
+        <div className="bg-white p-6 rounded-lg shadow-md max-w-lg text-center">
           <p className="text-lg font-semibold mb-4">"{quote.quote}"</p>
-          <p className="dark:text-white text-black"><em>- {quote.author}</em></p>
+          <p className="text-gray-600"><em>- {quote.author}</em></p>
         </div>
       )}
     </div>
