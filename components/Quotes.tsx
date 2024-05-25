@@ -19,8 +19,9 @@ export default function Quotes() {
 
   return (
     <div className="flex flex-col items-center justify-center p-5">
+      <h1 className="text-xl font-semibold mb-5">Click the button to get a random quote for a daily inspiration 🤩</h1>
       <Button variant="secondary" onClick={fetchRandomQuote} className="mb-5">
-        Get Inspirational Quote
+        Get Quote
       </Button>
       {quote && (
         <div className="p-6 rounded-lg shadow-md max-w-lg text-center">
