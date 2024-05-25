@@ -1,7 +1,7 @@
 // @ts-nocheck
 "use client";
 import { useState } from 'react';
-import { Button } from 'shadcn-ui';
+import { Button } from "@/components/ui/button";
 
 export default function Quotes() {
   const [quote, setQuote] = useState<{ quote: string; author: string } | null>(null);
@@ -18,12 +18,12 @@ export default function Quotes() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-5">
+    <div className="flex flex-col items-center justify-center p-5">
       <Button variant="secondary" onClick={fetchRandomQuote} className="mb-5">
         Get Random Quote
       </Button>
       {quote && (
-        <div className="bg-white p-6 rounded-lg shadow-md max-w-lg text-center">
+        <div className="p-6 rounded-lg shadow-md max-w-lg text-center">
           <p className="text-lg font-semibold mb-4">"{quote.quote}"</p>
           <p className="text-gray-600"><em>- {quote.author}</em></p>
         </div>
