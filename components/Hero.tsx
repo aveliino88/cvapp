@@ -1,16 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faCloudflare } from '@fortawesome/free-brands-svg-icons';
+import { Separator } from '@/components/ui/separator';
 
 const Hero = () => {
   return (
-    <section className="hero flex flex-col-reverse lg:flex-row items-center justify-between py-16 px-4 md:px-8 lg:px-20">
-      <div className="w-full lg:w-1/2 pr-6">
+    <section className="hero flex flex-col lg:flex-row items-center justify-between py-16 px-4 md:px-8 lg:px-20">
+      <div className="flex px-2 mb-5">
         <Image
-          src="/cat6.webp" // Replace with your image path
+          src="https://djangoappv1.b-cdn.net/cat01.webp" // Replace with your image path
           alt="Hero Image"
-          width={700}
+          width={600}
           height={600}
           className="rounded-lg  border-2 border-indigo-500 shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
         />
@@ -59,7 +60,7 @@ const Hero = () => {
          href={'https://github.com/aveliino88/cvapp'} 
          target="_blank" 
          rel="noopener noreferrer"
-         className="inline-flex items-center px-4 py-2 border-2 border-indigo-500 text-sm font-medium rounded-md shadow-sm shadow-indigo-600 bg-slate-950 text-white"
+         className="inline-flex items-center px-4 py-2 border-2 border-white text-sm font-medium rounded-md shadow-sm shadow-indigo-600 bg-slate-950 text-white"
          >
          <FontAwesomeIcon icon={faGithub} className="mr-2" /> View Source Code
         </Link> 
