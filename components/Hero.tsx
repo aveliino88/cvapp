@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faCloudflare } from '@fortawesome/free-brands-svg-icons';
 import { Separator } from '@/components/ui/separator';
+import Gitbutton from './Gitbutton';
 
 const Hero = () => {
   return (
@@ -13,7 +14,7 @@ const Hero = () => {
           alt="Hero Image"
           width={600}
           height={600}
-          className="rounded-lg  border-2 border-indigo-500 shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+          className="rounded-lg border-2 border-indigo-500 shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
         />
       </div>
       <div className="w-full lg:w-1/2 flex flex-col space-y-8">
@@ -56,14 +57,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="flex justify-center">
-        <Link 
-         href={'https://github.com/aveliino88/cvapp'} 
-         target="_blank" 
-         rel="noopener noreferrer"
-         className="inline-flex items-center px-4 py-2 border-2 border-white text-sm font-medium rounded-md shadow-sm shadow-indigo-600 bg-slate-950 text-white"
-         >
-         <FontAwesomeIcon icon={faGithub} className="mr-2" /> View Source Code
-        </Link> 
+        <Gitbutton />
        </div> 
       </div>
     </section>

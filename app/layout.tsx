@@ -16,7 +16,7 @@ const fontSans = FontSans({
 })
 
 export const metadata: Metadata = {
-  title: "My App  - Next.js",
+  title: "a3v.pro - my app built with Next.js",
   description: "This is my app built with Next.js",
 };
 
