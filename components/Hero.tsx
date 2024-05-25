@@ -1,9 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faCloudflare } from '@fortawesome/free-brands-svg-icons';
-import { Separator } from '@/components/ui/separator';
-import Gitbutton from './Gitbutton';
+import Gitbutton from '@/components/Gitbutton';
 
 const Hero = () => {
   return (

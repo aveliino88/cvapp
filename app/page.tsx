@@ -1,8 +1,7 @@
 import Hero from "@/components/Hero";
 import { Separator } from "@/components/ui/separator";
-import Cv from "@/components/Cv";
 import CodePage from "@/components/CodePage";
-import AltHero from "@/components/AltHero";
+import Quotes from "@/components/Quotes";
 
 export default function Home() {
 
@@ -12,6 +11,8 @@ export default function Home() {
       Tech Stack used in this project
     </h2>
       <Hero />
+      <Separator orientation="horizontal" className="mb-10" />
+      <Quotes />
       <Separator orientation="horizontal" className="mb-10" />
       <CodePage />
   </div>
