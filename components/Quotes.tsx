@@ -24,7 +24,7 @@ export default function Quotes() {
       </Button>
       {quote && (
         <div className="p-6 rounded-lg shadow-md max-w-lg text-center">
-          <p className="text-lg font-semibold mb-4">"{quote.quote}"</p>
+           <p className="text-lg font-semibold mb-4">{`"${quote.quote}"`}</p>
           <p className="text-gray-600"><em>- {quote.author}</em></p>
         </div>
       )}
