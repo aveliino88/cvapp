@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import { Separator } from "@/components/ui/separator";
 import Cv from "@/components/Cv";
 import CodePage from "@/components/CodePage";
+import AltHero from "@/components/AltHero";
 
 export default function Home() {
 

@@ -29,7 +29,7 @@ const CodePage = () => {
        >
         {codeString}
       </SyntaxHighlighter>
-    </div>
+      </div>
   );
 };
 
