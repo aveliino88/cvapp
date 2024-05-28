@@ -1,4 +1,5 @@
 import {Card, CardTitle, CardContent, CardFooter} from '@/components/ui/card'
+import Quotes from './Quotes';
 const Cv = () => {
     return (
       <div className="grid grid-rows-3 grid-flow-col gap-4">
@@ -6,11 +7,8 @@ const Cv = () => {
         <Card>
             <CardTitle className='flex justify-center mt-5'>Card Title</CardTitle>
             <CardContent>
-                Card Content
+                <Quotes />
             </CardContent>
-            <CardFooter>
-                Card Footer
-            </CardFooter>
         </Card>
         </div>
         <div className="col-span-2">
@@ -21,4 +19,4 @@ const Cv = () => {
     );
   };
   
-  export default Cv
+  export default Cv;

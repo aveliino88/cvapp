@@ -11,9 +11,12 @@ export default function Generator() {
         <div><PasswordGenerator /></div>
         <div className="mt-5">
         <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 flex justify-center">See your IP info</h2>
-        <div className="flex justify-center mt-5">
+        <div className="flex justify-center mt-5 gap-1">
         <Link href="/examples">
         <Button variant="outline">Get IP info</Button>
+        </Link>
+        <Link href="/protected">
+        <Button variant="outline">Protected Page</Button>
         </Link>
         </div>
         </div>

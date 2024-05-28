@@ -15,6 +15,7 @@ export default function Home() {
       <Quotes />
       <Separator orientation="horizontal" className="mb-10" />
       <CodePage />
+      <Separator orientation="horizontal" className="mb-10" />
   </div>
     
   );
