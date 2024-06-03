@@ -3,4 +3,3 @@ export async function getUserIp() {
     const data = await res.json();
     return data.ip;
   }
-  

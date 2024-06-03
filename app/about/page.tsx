@@ -13,3 +13,6 @@ export default function AboutPage() {
     </div>
   );
 }
+export const metadata = {
+  title: 'About',
+}
