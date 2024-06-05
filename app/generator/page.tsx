@@ -7,7 +7,7 @@ export default function Generator() {
     <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 flex justify-center items-center">
       Some useful tools for you
     </h2>
-        <div className="flex flex-row justify-center items-center mt-5 gap-20">
+        <div className="flex flex-col justify-center items-center mt-5 gap-20">
         <div><PasswordGenerator /></div>
         <div className="mt-5">
         <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 flex justify-center">See your IP info</h2>

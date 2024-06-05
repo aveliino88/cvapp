@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const GHOST_API_URL = 'https://nofomo.pro';
-const GHOST_API_KEY = 'feabb117196279350eb8ca5a8e';
+const GHOST_API_URL = process.env.GHOST_API_URL;
+const GHOST_API_KEY = process.env.GHOST_API_KEY;
 
 export async function getPosts() {
   try {
