@@ -1,6 +1,5 @@
 // @ts-nocheck
 import Image from 'next/image';
-import Link from 'next/link';
 import Gitbutton from '@/components/Gitbutton';
 
 const Hero = () => {
@@ -17,7 +16,7 @@ const Hero = () => {
       </div>
       <div className="w-full lg:w-1/2 flex flex-col space-y-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="p-4 border-solid border-2 border-indigo-600 rounded-lg hover:scale-105 shadow-lg shadow-indigo-500/50">
+          <div className="p-4 border-solid border-2 border-indigo-600 rounded-lg  hover:scale-105 shadow-lg shadow-indigo-500/50">
             <h3 className="text-xl font-bold mb-2">NextJS 🙂</h3>
             <p className="text-sm font-medium leading-none">
             The React Framework for the Web
@@ -42,9 +41,9 @@ const Hero = () => {
             </p>
           </div>
           <div className="p-4 border-solid border-2 border-indigo-600 rounded-lg hover:scale-105 shadow-lg shadow-indigo-500/50">
-            <h3 className="text-xl font-bold mb-2">Directus 😎</h3>
+            <h3 className="text-xl font-bold mb-2">GhostCMS 😎</h3>
             <p className="text-sm font-medium leading-none">
-            The backend to build anything or everything
+            Used for blogging purposes
             </p>
           </div>
           <div className="p-4 border-solid border-2 border-green-500 rounded-lg hover:scale-105 shadow-lg shadow-green-500/50">

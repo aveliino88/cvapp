@@ -21,10 +21,10 @@ export default async function PostPage({ params }) {
         <Image 
           src={post.feature_image} 
           alt={post.title} 
-          width={600} 
-          height={400}
+          width={800} 
+          height={800}
           quality={100}
-          className="w-full h-auto mb-4"
+          className="w-full h-auto mb-4 rounded-md"
         />
       )}
       <p className="text-gray-600 mb-8">{new Date(post.published_at).toLocaleDateString()}</p>

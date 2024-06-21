@@ -21,4 +21,5 @@ export async function getSinglePost(slug: any) {
     console.error('Error fetching post:', error);
     return null;
   }
+
 }
