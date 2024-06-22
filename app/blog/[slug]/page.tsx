@@ -1,6 +1,7 @@
 // @ts-nocheck
 import { getSinglePost, getPosts } from '../../../lib/ghost';
 import Image from 'next/image';
+import { prose, proseDark } from '@tailwindcss/typography';
 
 export async function generateStaticParams() {
   const posts = await getPosts();
@@ -28,7 +29,7 @@ export default async function PostPage({ params }) {
         />
       )}
       <p className="text-gray-600 mb-8">{new Date(post.published_at).toLocaleDateString()}</p>
-      <div className="prose" dangerouslySetInnerHTML={{ __html: post.html }} />
+      <article className="prose prose-slate dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: post.html }} />
     </div>
   );
 }
