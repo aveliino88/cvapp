@@ -1,19 +1,33 @@
 import Link from "next/link"
 import Image from "next/image"
+import React from "react";
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import { Button } from "./ui/button";
 
 export default function Hero() {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32">
       <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
-      <Image
-      src="/wolf6.png"
-      alt="Hero Image"
-      className="mx-auto aspect-square overflow-hidden rounded-xl object-cover sm:w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2]"
-      // Add these optional props for optimization
-      width={600} // Adjust width as needed
-      height={600} // Adjust height as needed
-      priority // Loads the image before other content (if necessary)
-    />
+      <div className="dark:bg-black bg-white  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2]">
+      <CardContainer className="inter-var">
+      <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.5] dark:bg-black w-auto sm:w-[30rem] h-auto rounded-xl p-6  ">
+        <CardItem translateZ="100" className="w-full mt-4">
+          <Image
+            src="https://djangoappv1.b-cdn.net/cat02.webp"
+            height="1000"
+            width="1000"
+            className="h-80 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+            alt="thumbnail"
+          />
+        </CardItem>
+        <div className="flex justify-center items-center mt-5">
+        <CardItem>
+          <p className="text-2xl font-bold">👋😃 Hi!</p>
+        </CardItem>
+        </div>
+      </CardBody>
+    </CardContainer>
+    </div>
         <div className="space-y-4">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Tech Stack used to build this application
