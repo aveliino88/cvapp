@@ -13,7 +13,7 @@ export async function getPosts() {
   }
 }
 
-export async function getSinglePost(slug: any) {
+export async function getSinglePost(slug: string) {
   try {
     const res = await axios.get(`${GHOST_API_URL}/ghost/api/v4/content/posts/slug/${slug}/?key=${GHOST_API_KEY}`);
     return res.data.posts[0];
