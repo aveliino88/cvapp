@@ -1,13 +1,12 @@
 "use client"
-
-import dynamic from 'next/dynamic';
+import { Suspense, lazy } from 'react';
 import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
+import TechStack from '@/components/TechStack';
 
-const Hero = dynamic(() => import("@/components/Hero"));
-const Quotes = dynamic(() => import("@/components/Quotes"));
-const CodePage = dynamic(() => import("@/components/CodePage"));
+const Hero = lazy(() => import("@/components/Hero"));
+const Quotes = lazy(() => import("@/components/Quotes"));
+const CodePage = lazy(() => import("@/components/CodePage"));
 
 export default function Home() {
   const { toast } = useToast();
@@ -15,24 +14,29 @@ export default function Home() {
   return (
     <div className='container mx-auto px-4 mt-10 space-y-10'>
       <h1 className="text-center scroll-m-20 border-b pb-2 text-3xl md:text-4xl font-semibold tracking-tight">
-        Welcome to my personal blog/portfolio app 😉
+       a3v.pro
       </h1>
 
-      <section aria-label="Hero section">
-        <Hero />
-      </section>
+      <Suspense fallback={<div>Loading Hero...</div>}>
+        <section aria-label="Hero section">
+          <Hero />
+        </section>
+      </Suspense>
       
+       {/*
+      <Suspense fallback={<div>Loading TechStack...</div>}>
+        <section aria-label="Tech Stack">
+          <TechStack />
+        </section>
+      </Suspense>
+       */}
       <Separator orientation="horizontal" />
       
-      <section aria-label="Quotes section">
-        <Quotes />
-      </section>
-      
-      <Separator orientation="horizontal" />
-      
-      <section aria-label="Code examples">
-        <CodePage />
-      </section>
+      <Suspense fallback={<div>Loading Code Examples...</div>}>
+        <section aria-label="Code examples">
+          <CodePage />
+        </section>
+      </Suspense>
       
       <Separator orientation="horizontal" />
     </div>

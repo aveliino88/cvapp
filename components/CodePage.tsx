@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { memo, useMemo } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { okaidia, dark, nightOwl } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { nightOwl } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 const codeString = `
 const contactInfo = {
@@ -19,18 +19,25 @@ const contactInfo = {
 console.log(contactInfo);
 `;
 
-const CodePage = () => {
+const CodePage = memo(function CodePage() {
+  const highlightedCode = useMemo(() => (
+    <SyntaxHighlighter 
+      language="javascript" 
+      style={nightOwl} 
+      wrapLines={true}
+      customStyle={{ padding: '20px', borderRadius: '15px' }}
+      lineProps={{ style: { wordBreak: 'break-all' } }}
+    >
+      {codeString}
+    </SyntaxHighlighter>
+  ), []);
+
   return (
     <div className='flex flex-col justify-center'>
-       <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight flex justify-center">Contact Me 🙂 </h3>
-      <SyntaxHighlighter language="javascript" style={nightOwl} wrapLines={true}
-       customStyle={{ padding: '20px', borderRadius: '15px', }}
-       lineProps={{ style: { wordBreak: 'break-all' } }}
-       >
-        {codeString}
-      </SyntaxHighlighter>
-      </div>
+      <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight flex justify-center">Contact Me 🙂 </h3>
+      {highlightedCode}
+    </div>
   );
-};
+});
 
 export default CodePage;
