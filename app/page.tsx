@@ -30,6 +30,8 @@ export default function Home() {
         </section>
       </Suspense>
        */}
+       <Separator orientation="horizontal" />
+       <TechStack />
       <Separator orientation="horizontal" />
       
       <Suspense fallback={<div>Loading Code Examples...</div>}>

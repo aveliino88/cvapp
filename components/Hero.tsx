@@ -20,9 +20,9 @@ export default function Hero() {
           <Image
             src="https://djangoappv1.b-cdn.net/cat02.webp"
             alt="Decorative image representing the tech stack"
-            layout="fill"
-            objectFit="cover"
-            className="transition-all duration-300 group-hover:scale-105"
+            fill
+            sizes="(max-width: 768px) 256px, (max-width: 1200px) 288px, 320px"
+            className="object-cover transition-all duration-300 group-hover:scale-105"
           />
         </div>
         
