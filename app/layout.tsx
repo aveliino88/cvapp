@@ -7,6 +7,7 @@ import Navbar from "@/components/ui/Navbar";
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import Footer from "@/components/ui/Footer";
+import Loading from "./loading"; // Import the Loading component
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -37,7 +38,8 @@ export default function RootLayout({
           <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
             <div className="flex flex-col min-h-screen">
               <Navbar />
-              <main className="flex-grow">
+              <main className="flex-grow relative">
+                <Loading />
                 {children}
               </main>
               <Footer />
