@@ -14,7 +14,7 @@ const nextConfig = {
               img-src 'self' data: https:;
               font-src 'self' data: https://fonts.gstatic.com;
               frame-src 'self' https://*.clerk.accounts.dev https://accounts.google.com https://www.google.com;
-              connect-src 'self' https://*.clerk.accounts.dev wss://*.clerk.accounts.dev;
+              connect-src 'self' https://*.clerk.accounts.dev wss://*.clerk.accounts.dev https://api.ipify.org;
               worker-src 'self' blob:;
             `.replace(/\s+/g, ' ').trim()
           }

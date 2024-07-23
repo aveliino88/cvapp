@@ -12,13 +12,13 @@ const Footer = memo(function Footer() {
             <p>&copy; {currentYear} My App. All rights reserved.</p>
           </div>
           <nav className="flex space-x-4">
-            <Link href="/about" className="hover:text-gray-300 transition-colors">
+            <Link href="/about" scroll={false} className="hover:text-gray-300 transition-colors">
               About
             </Link>
-            <Link href="/contact" className="hover:text-gray-300 transition-colors">
+            <Link href="/contact" scroll={false} className="hover:text-gray-300 transition-colors">
               Contact
             </Link>
-            <Link href="/quotes" className="hover:text-gray-300 transition-colors">
+            <Link href="/quotes" scroll={false} className="hover:text-gray-300 transition-colors">
               Inspiration
             </Link>
           </nav>

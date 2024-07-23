@@ -14,22 +14,22 @@ function Navbar() {
     <nav>
     <ul className='flex flex-row space-x-3 mt-5 justify-center flex-wrap'>
       <li className='font-bold mb-2'>
-        <Link href="/">
+        <Link href="/" scroll={false}>
         <Button variant="outline">Home</Button>
         </Link>
       </li>
       <li className='font-bold mb-2'>
-        <Link href="/about">
+        <Link href="/about" scroll={false}>
         <Button variant="outline">About</Button>
           </Link>
       </li>
       <li className='font-bold mb-2'>
-        <Link href="/blog">
+        <Link href="/blog" scroll={false}>
         <Button variant="outline">Blog</Button>
         </Link>
       </li>
       <li className='font-bold mb-2'>
-        <Link href="/generator">
+        <Link href="/generator" scroll={false}>
         <Button variant="outline">Tools</Button>
         </Link>
       </li>
