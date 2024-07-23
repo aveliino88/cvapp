@@ -7,7 +7,6 @@ import Navbar from "@/components/ui/Navbar";
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import Footer from "@/components/ui/Footer";
-import { Toaster } from "@/components/ui/toaster";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -38,12 +37,11 @@ export default function RootLayout({
           <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
             <div className="flex flex-col min-h-screen">
               <Navbar />
-              <main className="flex-grow container mx-auto px-4 py-8">
+              <main className="flex-grow container mx-auto px-4 pb-8">
                 {children}
               </main>
               <Footer />
             </div>
-            <Toaster />
           </ThemeProvider>
         </ClerkProvider>
       </body>
