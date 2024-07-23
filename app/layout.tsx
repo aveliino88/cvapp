@@ -32,12 +32,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={cn("antialiased", fontSans.variable)}>
-      <body className="min-h-screen bg-background font-sans flex flex-col">
+      <body className="min-h-screen bg-background font-sans">
         <ClerkProvider appearance={{ baseTheme: dark }}>
           <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
             <div className="flex flex-col min-h-screen">
               <Navbar />
-              <main className="flex-grow container mx-auto px-4 pb-8">
+              <main className="flex-grow">
                 {children}
               </main>
               <Footer />
