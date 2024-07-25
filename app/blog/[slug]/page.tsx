@@ -1,40 +1,48 @@
-import { getSinglePost, getPosts } from '../../../lib/ghost';
-import { GhostPost } from '../../../types/ghost';
-import Image from 'next/image';
-import { format } from 'date-fns';
-import { Metadata } from 'next';
+import { getSinglePost, getPosts } from "../../../lib/ghost";
+import { GhostPost } from "../../../types/ghost";
+import Image from "next/image";
+import { format } from "date-fns";
+import { Metadata } from "next";
 
 export async function generateStaticParams() {
   const posts = await getPosts();
-  return posts.map(post => ({ slug: post.slug }));
+  return posts.map((post) => ({ slug: post.slug }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
   const post = await getSinglePost(params.slug);
-  
+
   if (!post) {
     return {
-      title: 'Post Not Found',
+      title: "Post Not Found",
     };
   }
 
   const createShortDescription = (content: string, maxLength: number = 160) => {
     // Remove HTML tags
-    const textContent = content.replace(/<[^>]+>/g, '');
+    const textContent = content.replace(/<[^>]+>/g, "");
     // Truncate to maxLength
-    return textContent.length > maxLength 
-      ? textContent.slice(0, maxLength) + '...'
+    return textContent.length > maxLength
+      ? textContent.slice(0, maxLength) + "..."
       : textContent;
   };
   const description = post.excerpt || createShortDescription(post.html);
 
   return {
-    title: 'Blog | ' + post.title,
+    title: "Blog | " + post.title,
     description: post.excerpt || `Read ${post.title} on our blog`,
   };
 }
 
-export default async function PostPage({ params }: { params: { slug: string } }) {
+export default async function PostPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const post: GhostPost | null = await getSinglePost(params.slug);
 
   if (!post) {
@@ -51,17 +59,18 @@ export default async function PostPage({ params }: { params: { slug: string } })
             alt={post.title}
             fill
             sizes="(min-width: 1024px) 800px, 100vw"
-            loading="lazy"
+            loading="eager"
+            priority
             className="rounded-md object-cover"
           />
         </div>
       )}
       <p className="text-gray-600 mb-8">
-        {format(new Date(post.published_at), 'MMMM dd, yyyy')}
+        {format(new Date(post.published_at), "MMMM dd, yyyy")}
       </p>
-      <article 
+      <article
         className="prose prose-slate dark:prose-invert max-w-none"
-        dangerouslySetInnerHTML={{ __html: post.html }} 
+        dangerouslySetInnerHTML={{ __html: post.html }}
       />
     </div>
   );
