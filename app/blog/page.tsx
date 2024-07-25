@@ -2,6 +2,17 @@
 import { getPosts } from "../../lib/ghost";
 import Link from "next/link";
 import Image from "next/image";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Blog | a3v.pro',
+  description: 'Explore our latest articles and insights on our blog.',
+  openGraph: {
+    title: 'Blog | a3v.pro',
+    description: 'Explore our latest articles and insights on our blog.',
+    type: 'website',
+  },
+};
 
 export default async function BlogPage() {
   const posts = await getPosts();

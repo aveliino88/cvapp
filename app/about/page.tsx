@@ -14,5 +14,5 @@ export default function AboutPage() {
   );
 }
 export const metadata = {
-  title: 'About',
+  title: 'About | a3v.pro',
 }

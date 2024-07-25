@@ -2,10 +2,36 @@ import { getSinglePost, getPosts } from '../../../lib/ghost';
 import { GhostPost } from '../../../types/ghost';
 import Image from 'next/image';
 import { format } from 'date-fns';
+import { Metadata } from 'next';
 
 export async function generateStaticParams() {
   const posts = await getPosts();
   return posts.map(post => ({ slug: post.slug }));
+}
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const post = await getSinglePost(params.slug);
+  
+  if (!post) {
+    return {
+      title: 'Post Not Found',
+    };
+  }
+
+  const createShortDescription = (content: string, maxLength: number = 160) => {
+    // Remove HTML tags
+    const textContent = content.replace(/<[^>]+>/g, '');
+    // Truncate to maxLength
+    return textContent.length > maxLength 
+      ? textContent.slice(0, maxLength) + '...'
+      : textContent;
+  };
+  const description = post.excerpt || createShortDescription(post.html);
+
+  return {
+    title: 'Blog | ' + post.title,
+    description: post.excerpt || `Read ${post.title} on our blog`,
+  };
 }
 
 export default async function PostPage({ params }: { params: { slug: string } }) {

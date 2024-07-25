@@ -75,7 +75,7 @@ const Contact: NextPage = () => {
         setCaptchaToken('');
         recaptchaRef.current?.reset();
       } else {
-        setStatus(`Failed to send message: ${data.error}`);
+        setStatus(`Failed to send message: ${data.error || 'Unknown error'}`);
       }
     } catch (error) {
       setStatus('An error occurred. Please try again later.');
@@ -104,6 +104,7 @@ const Contact: NextPage = () => {
               onChange={handleInputChange}
               required
               minLength={2}
+              aria-label="Your name"
             />
           </div>
           <div className="space-y-2">
@@ -115,6 +116,7 @@ const Contact: NextPage = () => {
               value={formData.email}
               onChange={handleInputChange}
               required
+              aria-label="Your email address"
             />
           </div>
           <div className="space-y-2">
@@ -128,14 +130,19 @@ const Contact: NextPage = () => {
               rows={4}
               minLength={10}
               maxLength={500}
+              aria-label="Your message"
             />
           </div>
           <div className="flex justify-center">
-            <ReCAPTCHA
-              ref={recaptchaRef}
-              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
-              onChange={handleCaptchaChange}
-            />
+            {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ? (
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                onChange={handleCaptchaChange}
+              />
+            ) : (
+              <p className="text-red-500">ReCAPTCHA site key is not set</p>
+            )}
           </div>
           <Button type="submit" className="w-full">
             Send Message
@@ -143,7 +150,16 @@ const Contact: NextPage = () => {
         </form>
       </CardContent>
       <CardFooter>
-        {status && <p className="text-sm text-center w-full">{status}</p>}
+        {status && (
+          <p 
+            className={`text-sm text-center w-full ${
+              status.includes('success') ? 'text-green-500' : 'text-red-500'
+            }`} 
+            aria-live="polite"
+          >
+            {status}
+          </p>
+        )}
       </CardFooter>
     </Card>
   );
