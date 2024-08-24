@@ -2,15 +2,15 @@
 import { getPosts } from "../../lib/ghost";
 import Link from "next/link";
 import Image from "next/image";
-import { Metadata } from 'next';
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Blog | a3v.pro',
-  description: 'Explore our latest articles and insights on our blog.',
+  title: "Blog | a3v.pro",
+  description: "Explore our latest articles and insights on our blog.",
   openGraph: {
-    title: 'Blog | a3v.pro',
-    description: 'Explore our latest articles and insights on our blog.',
-    type: 'website',
+    title: "Blog | a3v.pro",
+    description: "Explore our latest articles and insights on our blog.",
+    type: "website",
   },
 };
 
@@ -37,7 +37,7 @@ export default async function BlogPage() {
             className="rounded-lg overflow-hidden transition-transform hover:scale-105 bg-white dark:bg-gray-800 shadow-md dark:shadow-gray-700 flex flex-col"
           >
             <Link href={`/blog/${post.slug}`} className="h-full flex flex-col">
-              {post.feature_image && (
+              {post.feature_image ? (
                 <div className="relative w-full aspect-video">
                   <Image
                     src={post.feature_image}
@@ -49,6 +49,10 @@ export default async function BlogPage() {
                     }}
                     loading="lazy"
                   />
+                </div>
+              ) : (
+                <div className="relative w-full aspect-video bg-gray-200 dark:bg-slate-900 flex items-center justify-center">
+                  <span>No image available</span>
                 </div>
               )}
               <div className="p-6 flex-grow flex flex-col">

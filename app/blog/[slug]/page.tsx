@@ -3,6 +3,7 @@ import { GhostPost } from "../../../types/ghost";
 import Image from "next/image";
 import { format } from "date-fns";
 import { Metadata } from "next";
+import { Separator } from "@/components/ui/separator";
 
 export async function generateStaticParams() {
   const posts = await getPosts();
@@ -52,7 +53,7 @@ export default async function PostPage({
   return (
     <div className="container mx-auto px-4 py-10">
       <h1 className="text-4xl font-bold mb-6 text-center">{post.title}</h1>
-      {post.feature_image && (
+      {post.feature_image ? (
         <div className="relative w-full aspect-video mb-4">
           <Image
             src={post.feature_image}
@@ -64,7 +65,12 @@ export default async function PostPage({
             className="rounded-md object-cover"
           />
         </div>
+      ) : (
+        <div className="relative w-full aspect-video mb-4 bg-gray-200 dark:bg-slate-900 flex items-center justify-center rounded-md">
+          <span>No image available</span>
+        </div>
       )}
+
       <p className="text-gray-600 mb-8">
         {format(new Date(post.published_at), "MMMM dd, yyyy")}
       </p>
@@ -72,6 +78,8 @@ export default async function PostPage({
         className="prose prose-slate dark:prose-invert max-w-none"
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
+
+      <Separator orientation="horizontal" />
     </div>
   );
 }
