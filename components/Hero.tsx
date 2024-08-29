@@ -18,11 +18,11 @@ export default function Hero() {
       <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-12">
         <div className="group relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 overflow-hidden rounded-full border-4 border-white shadow-lg">
           <Image
-            src="https://djangoappv1.b-cdn.net/cat02.webp"
+            src="/wolf5.jfif"
             alt="Decorative image representing the tech stack"
             fill
             sizes="(max-width: 768px) 256px, (max-width: 1200px) 288px, 320px"
-            className="object-cover transition-all duration-300 group-hover:scale-105"
+            className="object-cover transition-all duration-300 group-hover:scale-105 bg-white dark:bg-black"
             priority
           />
         </div>
