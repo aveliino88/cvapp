@@ -36,23 +36,6 @@ function Navbar() {
         <li>
           <ModeToggle />
         </li>
-        <li className="flex space-x-3 justify-end mb-2">
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
-          <SignedOut>
-            <div className="flex space-x-2">
-              <SignInButton>
-                <Button aria-label="Sign in">Sign in</Button>
-              </SignInButton>
-              <SignUpButton>
-                <Button variant="outline" aria-label="Sign up">
-                  Sign Up
-                </Button>
-              </SignUpButton>
-            </div>
-          </SignedOut>
-        </li>
       </ul>
     </nav>
   );

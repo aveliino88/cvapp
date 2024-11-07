@@ -2,8 +2,6 @@
 import { useState, useEffect } from "react";
 import { Separator } from "@/components/ui/separator";
 import Hero from "@/components/Hero";
-import CodePage from "@/components/CodePage";
-import TechStack from "@/components/TechStack";
 import Loading from "./loading";
 
 export default function Home() {
@@ -27,11 +25,6 @@ export default function Home() {
         </h1>
         <Hero />
         <Separator orientation="horizontal" />
-        <div className={`transition-opacity duration-500 ease-in-out ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
-          <TechStack />
-          <Separator orientation="horizontal" />
-          <CodePage />
-        </div>
       </div>
     </>
   );
