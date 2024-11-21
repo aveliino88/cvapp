@@ -24,11 +24,6 @@ function Navbar() {
           </Link>
         </li>
         <li className="font-bold mb-2">
-          <Link href="/blog" scroll={false}>
-            <Button variant="outline">Blog</Button>
-          </Link>
-        </li>
-        <li className="font-bold mb-2">
           <Link href="/generator" scroll={false}>
             <Button variant="outline">Tools</Button>
           </Link>
